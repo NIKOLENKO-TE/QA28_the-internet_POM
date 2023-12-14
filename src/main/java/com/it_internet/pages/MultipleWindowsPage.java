@@ -46,7 +46,7 @@ public class MultipleWindowsPage extends BasePage {
     WebElement newWindowText;
 
     public void verifyTabTitle(String text) { // проверяем, что в новой вкладке есть текст New Window
-        Assert.assertTrue(shouldHaveText(newWindowText, text, 5));
+        Assert.assertTrue(shouldHaveText(newWindowText, text, 5), "Текст в новой вкладке не совпадает с ожидаемым");
     }
 
     public boolean shouldHaveText(WebElement element, String text, int time) { // проверяем, что в элементе есть текст
