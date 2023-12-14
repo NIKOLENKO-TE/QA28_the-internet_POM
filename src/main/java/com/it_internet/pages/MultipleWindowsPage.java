@@ -45,9 +45,8 @@ public class MultipleWindowsPage extends BasePage {
     @FindBy(xpath = "//h3[contains(text(),'New Window')]")
     WebElement newWindowText;
 
-    public MultipleWindowsPage verifyTabTitle(String text) { // проверяем, что в новой вкладке есть текст New Window
+    public void verifyTabTitle(String text) { // проверяем, что в новой вкладке есть текст New Window
         Assert.assertTrue(shouldHaveText(newWindowText, text, 5));
-        return this;
     }
 
     public boolean shouldHaveText(WebElement element, String text, int time) { // проверяем, что в элементе есть текст
