@@ -52,6 +52,6 @@ public class MultipleWindowsPage extends BasePage {
 
     public boolean shouldHaveText(WebElement element, String text, int time) { // проверяем, что в элементе есть текст
         return new WebDriverWait(driver, Duration.ofSeconds(time))
-                .until(ExpectedConditions.textToBePresentInElement(element, text));
+                .until(ExpectedConditions.textToBePresentInElement(element, text)); // ждем, пока в элементе не появится текст
     }
 }
